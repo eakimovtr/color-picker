@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="app.css">
+    <script src="app.js" defer></script>
+    <title>Palette</title>
+  </head>
+  <body>
+    <div class="container text-center w-25">
+      <h3>Create your color</h3>
+      <form>
+        <div class="row g-3 align-items-center">
+          <div class="col-auto">
+            <label for="name" class="col-form-label">Color name</label>
+          </div>
+          <div class="col-auto">
+            <input type="text" id="name" class="form-control" />
+          </div>
+          <div class="col-auto" id="nameError">
+            <!-- <span style="color: red;" class="form-text">
+                        Must only contain letters.
+                    </span> -->
+          </div>
+        </div>
+        <div class="row g-3 align-items-center">
+          <div class="col-auto">
+            <label for="selector" class="col-form-label">Color model</label>
+          </div>
+          <div class="col-auto">
+            <select
+              class="form-select"
+              aria-label="Default select example"
+              id="selector"
+            >
+              <option value="rgb" selected>RGB</option>
+              <option value="rgba">RGBA</option>
+              <option value="hex">HEX</option>
+            </select>
+          </div>
+        </div>
+        <div class="row g-3 align-items-center">
+          <div class="col-auto">
+            <label for="code" class="col-form-label">Color code</label>
+          </div>
+          <div class="col-auto">
+            <input type="text" id="code" class="form-control" />
+          </div>
+          <div class="col-auto" id="codeError">
+            <!-- <span style="color: red;" id="passwordHelpInline" class="form-text">
+                        Invalid code.
+                    </span> -->
+          </div>
+        </div>
+        <button class="btn btn-primary" type="submit" id="save">Save</button>
+      </form>
+    </div>
+    <div class="colors-display container text-center fixed-bottom">
+      <div class="row row-cols-3" id="color-display">
+        <!-- <div class="col colorBox">
+          <div class="colorInfo text-center">
+            <h4>Title</h4>
+            <h5>Model</h5>
+            <p>Value, value, value</p>
+          </div>
+        </div>
+      </div> -->
+    </div>
+  </body>
+</html>
